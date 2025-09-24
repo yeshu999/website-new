@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #aacdf0;
+      color: #00385c;
+      overflow-x: hidden;
+      min-height: 100vh;
+    } */
+   body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #00274D; 
+  overflow-x: hidden;
+  min-height: 100vh;
+    } 
+
+
+
+    /* .header {
+      position: relative;
+      background: linear-gradient(90deg, #02515c, #0a5588);
+      padding: 20px 40px 40px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    } */
+     .header {
+  position: relative;
+  background: linear-gradient(90deg, #00274D, #003399); /* Ford blues */
+  padding: 20px 40px 40px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  z-index: 2;
+}
+
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      z-index: 2;
+    }
+
+     .logo {
+      height: 80px;
+      z-index: 2;
+    } 
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 600;
+      color: #68696B;
+    }
+
+    .b2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #FFC828;
+    }
+
+    .brand-text {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #555;
+    }
+
+    .brand-text .village {
+      font-weight: 500;
+      color: #555;
+    }
+
+    .brand-text .md {
+      font-weight: 600;
+      color: #f8c441;
+    }
+
+    .brand-text sup {
+      font-size: 14px;
+      margin-left: 2px;
+      color: #999;
+    }
+
+    /* Triangle Shape */
+    .curved-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 200px;
+      z-index: 1;
+    }
+
+    .wave-bg {
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      background: url('https://svgshare.com/i/13mS.svg') no-repeat bottom center;
+      background-size: cover;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      margin-top: 200px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #00385c;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      font-weight: 500;
+      color: #0a5588;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 160px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* button img {
+      width: 60%;
+      height: auto;
+    } */
+button img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;             /* Keeps icons sharp */
+  border-radius: 10px;             /* Rounded corners */
+  background: #ffffff;             /* White background behind icons */
+  padding: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:hover img {
+  transform: scale(1.1);           /* Zoom-in effect on hover */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+    button span {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #004a6d;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        height: 100px;
+      }
+
+      /* .brand-name {
+        font-size: 50px;
+      } */
+       .brand-name {
+  font-size: 28px;
+  font-weight: 600;
+  color: #00274D; /* Ford Blue */
+}
+
+      /* .b2 {
+        font-size: 50px;
+      } */
+  .b2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #C4C4C4; /* Optional: Ford Silver accent */
+}
+      .title {
+        font-size: 32px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .container {
+        gap: 10px;
+      }
+
+      button {
+        width: 130px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header with triangle background -->
+  <div class="header">
+    <!-- White angled triangle -->
+    <svg class="curved-left" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polygon points="0,0 100,0 0,100" fill="#ffffff" />
+    </svg>
+
+    <!-- Logo and Brand -->
+    <div class="logo-group">
+      <img class="logo" src="../IMAGES/ford.png" alt="FORD Logo">
+      <!-- <span class="brand-name">FORD</span> -->
+      <!-- <span class="b2">MD</span> -->
+    </div>
+  </div>
+
+  <!-- Decorative Wave Background -->
+  <div class="wave-bg"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <h1 class="title">Ford Pro</h1>
+    <h2 class="subtitle">Anypoint Control Center</h2>
+
+    <div class="container">
+      <button onclick="window.location.href='../MULE-ADMIN-API/APIMANAGER.html'">
+        <img src="../IMAGES/api.png" alt="API MANAGER">
+        <span>API MANAGER TOOL</span>
+      </button>
+
+      <button onclick="window.location.href='../MULE-ADMIN-API/RTMANAGER.html'">
+        <img src="../IMAGES/rtm.png" alt="RUNTIME MANAGER">
+        <span>RUNTIME MANAGER TOOL</span>
+      </button>
+
+      <!-- <button onclick="window.location.href='../MULE-ADMIN-API/CONNECTOR-UPDATE.html'">
+        <img src="../IMAGES/update.png" alt="CONNECTOR UPDATE">
+        <span>CONNECTOR UPDATE TOOL</span>
+      </button> -->
+      <!-- <button onclick="window.location.href='../MULE-ADMIN-API/OBJECTSTORE.html'">
+        <img src="../IMAGES/obj2.png" alt="OBJECT STORE TOOL">
+        <span>OBJECT STORE TOOL</span>
+      </button> -->
+      <button class="tool" onclick="window.location.href='../MULE-ADMIN-API/ANYPOINT-MQ.html'">
+          <img src="../IMAGES/mq.jpg" alt="ANYPOINT MQ TOOL">
+          <span>ANYPOINT MQ TOOL</span>
+        </button>
+    </div>
+  </div>
+
+</body>
+
+</html>
